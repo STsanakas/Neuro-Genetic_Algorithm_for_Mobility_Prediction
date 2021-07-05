@@ -1,1 +1,1 @@
-# Neuro-Genetic_Algorithm_for_Mobility_Prediction
+# Neuro-Genetic Algorithm for Mobility Prediction
