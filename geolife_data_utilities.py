@@ -11,7 +11,7 @@ def get_data(mode):
   return trainX, testX, trainY, testY
 
 def get_data_path():
-  return '/home/tsanakas/Desktop/NeuroGenetic/'
+  return '/insert/data/path/'
 
 def get_geolife_path():
   return get_data_path()+'Geolife/'
