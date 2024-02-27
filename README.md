@@ -1,3 +1,3 @@
-# Neuro-Genetic Algorithm for Mobility Prediction
+Installation
 
-Code will be made publicly available upon acceptance of this paper.
+ - In your virtual environment run ```pip install -r requirements.txt```

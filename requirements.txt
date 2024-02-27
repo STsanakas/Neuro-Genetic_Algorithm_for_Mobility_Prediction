@@ -1,0 +1,7 @@
+numpy
+pandas
+tabulate
+tqdm
+scikit-learn
+tensorflow[and-cuda]
+keras
