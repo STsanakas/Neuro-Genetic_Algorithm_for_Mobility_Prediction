@@ -247,7 +247,6 @@ def genetic(trainX, trainY, testX, testY, train_size, test_size, models_path, it
         else:
             del models
             models = next_models
-            #####################################
             combinations=[]
             similarities=[]
             for num1 in range(int(population*survival_rate)):
@@ -257,7 +256,6 @@ def genetic(trainX, trainY, testX, testY, train_size, test_size, models_path, it
                         similarities.append(similarity(best, prev_models[num1], prev_models[num2]))
             similarities=[number ** 30 for number in similarities]
             similarities=[number/sum(similarities) for number in similarities]
-            #####################################
             for j in tqdm(range(len(models), population)):
                 parents=random.choices(combinations, weights=similarities)     
                 child = mate(parents[0][0]['parameters'],
@@ -271,12 +269,9 @@ def genetic(trainX, trainY, testX, testY, train_size, test_size, models_path, it
             del next_models
         models = sorted(models, key=lambda i: i['error'], reverse=False)
         next_models = []
-        ###########################
         prev_models = models.copy()
-        ###########################
         for j in range(int(survival_rate*population)):
             next_models.append(models[j])
-        # print(p1_target, 'is the next p1 target')
         iteration_best.append(models[0]['error'])
         av = 0
         for m in next_models:
